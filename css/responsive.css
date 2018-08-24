@@ -1,0 +1,19 @@
+@media screen and (max-width: 400px) {
+	.filter-options h2 {
+		padding-top: 8px;
+	}
+	.filter-options {
+		flex-direction: column;
+		height: 130px;
+		
+	}
+	.filter-options select {
+		align-self: center;
+	}
+	.filter-options:last-of-type {
+		padding-bottom: 5px;
+	}
+	#restaurants-list li {
+		width: 260px;
+	}
+}
