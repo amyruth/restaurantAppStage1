@@ -25,6 +25,11 @@
 	}
 	.filter-options {
 		flex-direction: row;
+		justify-content: center;
+		padding: 20px;
+	}
+	.filter-options h2 {
+		font-size: 1.4rem; 
 	}
 }
 
@@ -42,9 +47,6 @@
 }
 
 @media screen and (min-width: 700px) {
-	#restaurants-list li {
-		width: 300px;
-	}
 	#restaurants-list li p {
 		font-size: 16px;
 	}
@@ -64,4 +66,13 @@
 		font-size: 16px;
 		padding: 10px 30px 10px;
 	}
+}
+
+@media screen and (min-width: 1200px) {
+	.filter-options {
+		justify-content: flex-start;
+	}
+	/* #restaurants-list li {
+		width: 250px;
+	} */
 }
