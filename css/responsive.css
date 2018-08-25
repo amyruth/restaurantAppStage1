@@ -1,19 +1,67 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 499px) {
 	.filter-options h2 {
 		padding-top: 8px;
 	}
 	.filter-options {
 		flex-direction: column;
-		height: 130px;
-		
-	}
-	.filter-options select {
-		align-self: center;
 	}
 	.filter-options:last-of-type {
 		padding-bottom: 5px;
 	}
 	#restaurants-list li {
-		width: 260px;
+		width: 250px;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	#restaurants-list li {
+		width: 350px;
+	}
+	#restaurants-list li p {
+		font-size: 16px;
+	}
+	#restaurants-list li h1 {
+		font-size: 24px;
+	}
+	.filter-options {
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	#restaurants-list li {
+		width: 400px;
+		margin-bottom: 30px;
+	}
+	#restaurants-list li p {
+		font-size: 18px;
+	}
+	#restaurants-list li h1 {
+		font-size: 24px;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	#restaurants-list li {
+		width: 300px;
+	}
+	#restaurants-list li p {
+		font-size: 16px;
+	}
+	#restaurants-list li h1 {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#restaurants-list li h1 {
+		font-size: 20px;
+	}
+	#restaurants-list li p {
+		font-size: 16px;
+	}
+	#restaurants-list li a {
+		font-size: 16px;
+		padding: 10px 30px 10px;
 	}
 }
