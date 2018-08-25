@@ -5,23 +5,23 @@
 	.filter-options {
 		flex-direction: column;
 	}
-	.filter-options select {
-		align-self: center;
-	}
 	.filter-options:last-of-type {
 		padding-bottom: 5px;
 	}
 	#restaurants-list li {
-		width: 275px;
+		width: 250px;
 	}
 }
 
-@media screen and (min-width: 599px) {
+@media screen and (min-width: 500px) {
 	#restaurants-list li {
 		width: 350px;
 	}
-	#restaurants-list p {
+	#restaurants-list li p {
 		font-size: 16px;
+	}
+	#restaurants-list li h1 {
+		font-size: 24px;
 	}
 	.filter-options {
 		flex-direction: row;
@@ -33,17 +33,35 @@
 		width: 400px;
 		margin-bottom: 30px;
 	}
-}
-
-@media screen and (min-width: 768px) {
-	#restaurants-list li {
-		width: 250px;
+	#restaurants-list li p {
+		font-size: 18px;
+	}
+	#restaurants-list li h1 {
+		font-size: 24px;
 	}
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
 	#restaurants-list li {
 		width: 300px;
+	}
+	#restaurants-list li p {
+		font-size: 16px;
+	}
+	#restaurants-list li h1 {
+		font-size: 20px;
+	}
+}
 
+@media screen and (min-width: 1024px) {
+	#restaurants-list li h1 {
+		font-size: 20px;
+	}
+	#restaurants-list li p {
+		font-size: 16px;
+	}
+	#restaurants-list li a {
+		font-size: 16px;
+		padding: 10px 30px 10px;
 	}
 }
