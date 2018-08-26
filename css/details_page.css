@@ -1,0 +1,17 @@
+@media screen and (min-width: 320px) {
+	nav h1 a {
+		letter-spacing: 5px;
+	}
+	nav {
+		height: 60px;
+	}
+	#breadcrumb li {
+		font-size: 16px;
+	}
+	.inside #map-container {
+		width: 100%;
+	}
+	.inside #map{
+		width: 100%;
+	}
+}
