@@ -14,4 +14,45 @@
 	.inside #map{
 		width: 100%;
 	}
+	.inside #restaurant-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 40px;
+		width: 100%;
+	}
+	.inside #restaurant-name {
+		font-size: 18px;
+	}
+	.inside #restaurant-cuisine {
+		width: 100%;
+	}
+	.inside #restaurant-hours td {
+		padding: 5px;
+	}
+	.inside #reviews-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		/* width: 100%; */
+	}
+	#reviews-list li p:nth-child(-n+3) {
+		font-weight: bold;
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	#restaurant-hours td:last-of-type {
+		padding-left: 30px;
+	}
+	#restaurant-hours td {
+		font-size: 16px;
+	}
+	#reviews-list li p:nth-child(4) {
+		font-size: 16px;
+	}
+
 }
