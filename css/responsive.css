@@ -85,9 +85,3 @@
 		font-size: 26px;
 	}
 }
-
-@media screen and (min-width: 1200px) {
-	.filter-options {
-		justify-content: flex-start;
-	}
-}
