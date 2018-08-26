@@ -1,3 +1,10 @@
+@media screen and (min-width: 0) {
+	nav h1 a {
+		font-size: 18px;
+	}
+}
+
+
 @media screen and (max-width: 499px) {
 	.filter-options h2 {
 		padding-top: 8px;
@@ -11,9 +18,11 @@
 	#restaurants-list li {
 		width: 250px;
 	}
+
 }
 
 @media screen and (min-width: 500px) {
+
 	#restaurants-list li {
 		width: 350px;
 	}
@@ -35,7 +44,7 @@
 
 @media screen and (min-width: 600px) {
 	#restaurants-list li {
-		width: 400px;
+		width: 375px;
 		margin-bottom: 30px;
 	}
 	#restaurants-list li p {
@@ -44,9 +53,15 @@
 	#restaurants-list li h1 {
 		font-size: 24px;
 	}
+	nav h1 a {
+		font-size: 22px;
+	}
 }
 
 @media screen and (min-width: 700px) {
+	#restaurants-list li {
+		width: 325px;
+	}
 	#restaurants-list li p {
 		font-size: 16px;
 	}
@@ -66,13 +81,13 @@
 		font-size: 16px;
 		padding: 10px 30px 10px;
 	}
+	nav h1 a {
+		font-size: 26px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	.filter-options {
 		justify-content: flex-start;
 	}
-	/* #restaurants-list li {
-		width: 250px;
-	} */
 }
