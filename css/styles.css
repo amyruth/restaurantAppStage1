@@ -128,7 +128,7 @@ nav h1 a {
 
 #breadcrumb li {
 	display: inline;
-	font-size: 36px;
+	/* font-size: 36px; */
 }
 
 /* Add a slash symbol (/) before/behind each list item */
