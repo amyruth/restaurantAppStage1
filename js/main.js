@@ -76,13 +76,7 @@ initMap = () => {
 		scrollWheelZoom: false
 	});
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-<<<<<<< HEAD
-		mapboxToken: 'TOKEN HERE',
-||||||| merged common ancestors
 		mapboxToken: 'pk.eyJ1IjoiYW5ydXRoZXJmb3JkIiwiYSI6ImNqbDVoZGx5czBoa3Aza241YTYzaGRkeXEifQ.6oVVj2Z0fQyJcA6tp-Ra7A',
-=======
-		mapboxToken: 'TOKEN GOES HERE',
->>>>>>> 9471b376ff78a48d14e15a45e6565c06563522d3
 		maxZoom: 18,
 		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -92,19 +86,6 @@ initMap = () => {
 
 	updateRestaurants();
 }
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
-
 /**
  * Update page and map for current restaurants.
  */
@@ -184,6 +165,7 @@ createRestaurantHTML = (restaurant) => {
 	li.append(address);
 
 	const more = document.createElement('a');
+	more.setAttribute('aria-label', `View details about ${restaurant.name}`);
 	more.innerHTML = 'View Details';
 	more.href = DBHelper.urlForRestaurant(restaurant);
 	li.append(more);
@@ -207,13 +189,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 	});
 
 }
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
+
