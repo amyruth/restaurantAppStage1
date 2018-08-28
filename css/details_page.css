@@ -57,7 +57,7 @@
 
 @media screen and (min-width: 500px) {
 	#restaurant-hours td:nth-child(even) {
-		padding-left: 50px;
+		padding-left: 30px;
 	}
 	#restaurant-hours td {
 		font-size: 18px;
@@ -86,7 +86,7 @@
 			font-size: 18px;
 		}
 		#restaurant-hours td:nth-child(even) {
-			padding-left: 100px;
+			padding-left: 50px;
 		}
 		#restaurant-cuisine {
 			font-size: 18px;
