@@ -22,7 +22,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-        mapboxToken: 'TOKEN HERE',
+        mapboxToken: 'pk.eyJ1IjoiYW5ydXRoZXJmb3JkIiwiYSI6ImNqbDVoZGx5czBoa3Aza241YTYzaGRkeXEifQ.6oVVj2Z0fQyJcA6tp-Ra7A',
         maxZoom: 18,
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
           '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -75,8 +75,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 	image.src = DBHelper.imageUrlForRestaurant(restaurant);
 	const imageBase = image.src.substr(0, image.src.length-4);
 	console.log(image.src.substr(0, image.src.length-4));
-	image.src = imageBase + '_600.jpg';
-	image.srcset =`${imageBase + '_400.jpg'} 400w, ${imageBase + '_600.jpg'} 600w`;
+	image.src = imageBase + '_400.jpg';
+	image.srcset =`${imageBase + '_400.jpg'} 400w, ${imageBase + '_200.jpg'} 200w`;
 	image.alt = `image of ${restaurant.name} Restaurant`;
 	
 

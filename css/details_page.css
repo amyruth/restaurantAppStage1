@@ -38,6 +38,9 @@
 	#breadcrumb li {
 		font-size: 16px;
 	}
+	.inside nav {
+		margin-bottom: 20px;
+	}
 }
 
 @media screen and (max-width: 499px) {
@@ -66,11 +69,17 @@
 	#reviews-list li p {
 		font-size: 16px;
 	}
+	.inside nav {
+		margin-bottom: 5px;
+	}
 }
 
 @media screen and (min-width: 768px) {
 	#breadcrumb li {
 		font-size: 20px;
+	}
+	.inside nav {
+		margin-bottom: 10px;
 	}
 }
 
@@ -98,13 +107,13 @@
 	.inside #restaurant-img {
 		width: 60%;
 	}
+	.inside nav {
+		margin-bottom: 20px;
+	}
 }
 
 @media screen and (min-width: 1250px) {
 	#breadcrumb li {
 		font-size: 24px;
-	}
-	.inside #restaurant-cuisine {
-		font-size: 20px;
 	}
 }

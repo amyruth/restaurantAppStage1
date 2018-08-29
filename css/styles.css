@@ -97,7 +97,6 @@ nav {
 	height: 80px;
 	background-color: #252831;
 	text-align: center;
-	margin-bottom: 10px;
 }
 
 nav h1 {
@@ -262,12 +261,13 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
-.inside header {
-	/* position: fixed;
+/* disabled because fixed header causes styling issues */
+/* .inside header {
+	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 1000; */
-}
+	z-index: 1000;
+} */
 
 .inside #map-container {
 	background: blue none repeat scroll 0 0;
@@ -284,11 +284,11 @@ nav h1 a {
 	width: 100%;
 }
 
-.inside #footer {
-	/* bottom: 0;
+/* .inside #footer {
+	bottom: 0;
 	position: absolute;
-	width: 50%; */
-}
+	width: 50%;
+} */
 
 #restaurant-name {
 	color: #804400;
