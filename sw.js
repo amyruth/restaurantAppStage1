@@ -1,6 +1,6 @@
 'use strict';
 
-const cacheName = 'v1';
+const restaurantCache = 'v1';
 
 const urlsToCache = [
 	'/js/dbhelper.js',
@@ -36,7 +36,7 @@ const urlsToCache = [
 // Cache files in install event
 self.addEventListener('install', function (event) {
 	event.waitUntil(
-		caches.open(cacheName)
+		caches.open(restaurantCache)
 		.then(function (cache) {
 			return cache.addAll(urlsToCache);
 		}).then(self.skipWaiting())
@@ -49,7 +49,7 @@ self.addEventListener('activate', function (event) {
 	event.waitUntil(
 		caches.keys().then(function (cacheNames) {
 			cacheNames.map(function (cache) {
-				if (cache !== cacheName) {
+				if (cache !== restaurantCache) {
 					return caches.delete(cache);
 				}
 			});
@@ -62,8 +62,13 @@ self.addEventListener('fetch', function(event){
 	event.respondWith(
 		caches.match(event.request)
 		.then(function(response) {
+			console.table(response);
 			return response || fetch(event.request);
+		}).catch(function(error){
+			console.log('error message ', error.response);
 		})
 	);
 });
 
+// from udacity mentor 
+// fetch("some.json", {cache: "only-if-cached"})
