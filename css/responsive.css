@@ -1,6 +1,22 @@
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #900011;
+	color: white;
+	padding: 8px;
+	z-index: 100;
+}
+
+.skip-link:focus {
+	top: 0;
+}
 @media screen and (min-width: 0) {
 	nav h1 a {
 		font-size: 18px;
+	}
+	nav h1 {
+		padding-top: 15px;
 	}
 }
 
@@ -39,6 +55,9 @@
 	}
 	.filter-options h2 {
 		font-size: 1.4rem; 
+	}
+	nav h1 {
+		padding-top: 25px;
 	}
 }
 

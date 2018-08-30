@@ -1,6 +1,7 @@
 @media screen and (min-width: 0) {
 	.inside #map-container {
 		width: 100%;
+		margin-top: 20px;
 	}
 	.inside #map {
 		width: 100%;
@@ -32,14 +33,20 @@
 	#restaurant-hours td {
 		font-size: 14px;
 	}
-	#restaurant-hours td:nth-child(even) {
-		padding-left: 20px;
-	}
+	#breadcrumb {
+		padding-top: 5px;
+		padding-bottom: 5px;
 	#breadcrumb li {
 		font-size: 16px;
 	}
 	.inside nav {
-		margin-bottom: 20px;
+		/* margin-bottom: 10px; */
+	}
+	#restaurant-hours caption {
+		font-size: 1.3em;
+		font-weight: 600;
+		letter-spacing: 1px;
+		padding: 10px 0;
 	}
 }
 
@@ -69,12 +76,15 @@
 	#reviews-list li p {
 		font-size: 16px;
 	}
-	.inside nav {
+	/* .inside nav {
 		margin-bottom: 5px;
-	}
+	} */
 }
 
 @media screen and (min-width: 768px) {
+	#breadcrumb {
+		padding-top: 10px;
+	}
 	#breadcrumb li {
 		font-size: 20px;
 	}
@@ -109,6 +119,9 @@
 	}
 	.inside nav {
 		margin-bottom: 20px;
+	}
+	#restaurant-address {
+		font-size: 18px;
 	}
 }
 
