@@ -1,6 +1,4 @@
-'use strict';
-
-const restaurantCache = 'v1';
+const cacheName = 'v1';
 
 const urlsToCache = [
 	'js/dbhelper.js',
@@ -30,47 +28,48 @@ const urlsToCache = [
 	'img/7_400.jpg',
 	'img/8_400.jpg',
 	'img/9_400.jpg',
-	'img/10_400.jpg'
+	'img/10_400.jpg',
+	'/index.html',
+	'/restaurant.html'
 ];
-
-// Cache files in install event
 self.addEventListener('install', function (event) {
 	event.waitUntil(
-		caches.open(restaurantCache)
-		.then(function (cache) {
+		caches.open(cacheName).then(function (cache) {
 			return cache.addAll(urlsToCache);
-		}).then(self.skipWaiting())
+		})
+		.catch(function(error) {
+			console.log('Error caching files ', error);
+		})
 	);
 });
 
-// Clean up old cache in activate event
 self.addEventListener('activate', function (event) {
-	console.log('Service worker activated');
 	event.waitUntil(
-		caches.keys().then(function (cacheNames) {
-			cacheNames.map(function (cache) {
-				if (cache !== restaurantCache) {
-					return caches.delete(cache);
-				}
-			});
+		caches.keys()
+		.then(function (cacheNames) {
+			return Promise.all(
+				cacheNames.map(function(cache) {
+					if(cache !== cacheName) {
+						return caches.delete(cache);
+					}
+				})
+			);
 		})
-	)
+	);	
 });
 
-// Offline cache with fetch event
-self.addEventListener('fetch', function(event){
+self.addEventListener('fetch', function(event) {
 	event.respondWith(
-		caches.open('restaurantCache')
-		.then(function(cache){
+		caches.open('v1')
+		.then(function(cache) {
 			return cache.match(event.request)
 			.then(function(response) {
 				return response || fetch(event.request)
 				.then(function(response) {
 					cache.put(event.request, response.clone());
 					return response;
-				});
+				});	
 			});
 		})
 	);
 });
-
