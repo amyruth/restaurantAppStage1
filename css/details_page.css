@@ -1,7 +1,6 @@
 @media screen and (min-width: 0) {
 	.inside #map-container {
 		width: 100%;
-		margin-top: 20px;
 	}
 	.inside #map {
 		width: 100%;
@@ -36,17 +35,22 @@
 	#breadcrumb {
 		padding-top: 5px;
 		padding-bottom: 5px;
+	}
 	#breadcrumb li {
 		font-size: 16px;
 	}
-	.inside nav {
-		/* margin-bottom: 10px; */
+nav h1 {
+		padding-bottom: 10px;
+		padding-top: 10px;
 	}
 	#restaurant-hours caption {
 		font-size: 1.3em;
 		font-weight: 600;
 		letter-spacing: 1px;
 		padding: 10px 0;
+	}
+	#maincontent {
+		margin-top: 10px;
 	}
 }
 
@@ -75,6 +79,9 @@
 	}
 	#reviews-list li p {
 		font-size: 16px;
+	}
+	#breadcrumb {
+		padding-top: 10px;
 	}
 }
 
