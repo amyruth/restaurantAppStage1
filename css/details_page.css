@@ -76,9 +76,6 @@
 	#reviews-list li p {
 		font-size: 16px;
 	}
-	/* .inside nav {
-		margin-bottom: 5px;
-	} */
 }
 
 @media screen and (min-width: 768px) {
@@ -90,6 +87,9 @@
 	}
 	.inside nav {
 		margin-bottom: 10px;
+	}
+	#restaurant-address {
+		font-size: 18px;
 	}
 }
 
@@ -119,9 +119,6 @@
 	}
 	.inside nav {
 		margin-bottom: 20px;
-	}
-	#restaurant-address {
-		font-size: 18px;
 	}
 }
 
