@@ -58,6 +58,9 @@ self.addEventListener('activate', function (event) {
 	);
 });
 
+// Offline caching code from Jake Archibald's Offline Cookbook
+// https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/
+
 self.addEventListener('fetch', function (event) {
 	event.respondWith(
 		caches.open('v1')
